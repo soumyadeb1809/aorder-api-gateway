@@ -11,7 +11,7 @@
 	<groupId>in.aorder</groupId>
 	<artifactId>gateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>gateway</name>
+	<name>api-gateway</name>
 	<description>API gateway for aorder Microservices.</description>
 	<properties>
 		<java.version>1.8</java.version>

@@ -1,0 +1,32 @@
+# Server configs
+server:
+  port: 6568
+
+# Spring configs
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    # Gateway configs
+    gateway:
+      routes:
+        # Path for restaurant service
+        - id: restaurant-service-route
+          uri: lb://restaurant-service
+          predicates:
+            - Path=/api/rfs/**
+
+        # Path for qrcode service
+        - id: qrcode-service-route
+          uri: lb://qrcode-service
+          predicates:
+            - Path=/api/qrs/**
+
+# Eureka configs
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    preferIpAddress: true

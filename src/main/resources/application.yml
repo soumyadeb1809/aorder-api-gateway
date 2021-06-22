@@ -2,6 +2,11 @@
 server:
   port: 6568
 
+# Application configs
+app:
+  package:
+    base: in.aorder.gateway
+
 # Spring configs
 spring:
   application:
